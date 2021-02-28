@@ -121,26 +121,32 @@ centrality(Network2d)$InExpectedInfluence
 #--------------------------------------network stability---------------------------------------------------------------------------------
 
 #adjacency matrix
+
+  #anxiety network
+
 Networka$graph
 Network2a$graph
+
+  #depression network
+
 Networkd$graph
 Network2d$graph
 
 #bootstrap routines, non-parametric bootstrap when handling ordinal data
 
     #anxiety network
-boot_spearmana <- bootnet(Networka, nCores=8, nBoots=2500, statistics = c("edge", "strength", "expectedInfluence"))
-boot_polya <- bootnet(Network2a, nCores=8, nBoots=2500, statistics = c("edge", "strength", "expectedInfluence"))
+boot_spearmana <- bootnet(Networka, nCores=8, nBoots=10000, statistics = c("edge", "strength", "expectedInfluence"))
+boot_polya <- bootnet(Network2a, nCores=8, nBoots=10000, statistics = c("edge", "strength", "expectedInfluence"))
 
-boot2_spearmana <- bootnet(Networka, nCores=8, nBoots=2500, type="case", statistics = c("edge", "strength", "expectedInfluence"))
-boot2_polya <- bootnet(Network2a, nCores=8, type = "case", nBoots=2500, statistics = c("edge", "strength", "expectedInfluence"))
+boot2_spearmana <- bootnet(Networka, nCores=8, nBoots=10000, type="case", statistics = c("edge", "strength", "expectedInfluence"))
+boot2_polya <- bootnet(Network2a, nCores=8, type = "case", nBoots=10000, statistics = c("edge", "strength", "expectedInfluence"))
 
     #depression network
-boot_spearmand <- bootnet(Networkd, nCores=8, nBoots=2500, statistics = c("edge", "strength", "expectedInfluence"))
-boot_polyd <- bootnet(Network2d, nCores=8, nBoots=2500, statistics = c("edge", "strength", "expectedInfluence"))
+boot_spearmand <- bootnet(Networkd, nCores=8, nBoots=10000, statistics = c("edge", "strength", "expectedInfluence"))
+boot_polyd <- bootnet(Network2d, nCores=8, nBoots=10000, statistics = c("edge", "strength", "expectedInfluence"))
 
-boot2_spearmand <- bootnet(Networkd, nCores=8, nBoots=2500, type="case", statistics = c("edge", "strength", "expectedInfluence"))
-boot2_polyd <- bootnet(Network2d, nCores=8, nBoots=2000, type="case", statistics = c("edge", "strength", "expectedInfluence"))
+boot2_spearmand <- bootnet(Networkd, nCores=8, nBoots=10000, type="case", statistics = c("edge", "strength", "expectedInfluence"))
+boot2_polyd <- bootnet(Network2d, nCores=8, nBoots=10000, type="case", statistics = c("edge", "strength", "expectedInfluence"))
 
 #plot edge weights CI
   
