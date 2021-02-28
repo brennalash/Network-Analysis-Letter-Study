@@ -118,7 +118,7 @@ centrality(Network2a)$InExpectedInfluence
 centrality(Networkd)$InExpectedInfluence
 centrality(Network2d)$InExpectedInfluence
 
-#--------------------------------------network stability---------------------------------------------------------------------------------
+#--------------------------------------network stability-------------------------------------------------------------------------------------
 
 #adjacency matrix
 
