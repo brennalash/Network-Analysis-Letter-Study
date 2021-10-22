@@ -4,6 +4,4 @@ Exploratory network analysis of depression and anxiety symptoms in relation to g
 
 Presented at ABCT 2021 
 
-Poster References
 
-[Insert Here]
